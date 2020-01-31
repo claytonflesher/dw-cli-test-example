@@ -16,6 +16,6 @@ do
   dw -i payload $INPUT "$SCRIPT"
   if [ "$?" -ne 0 ] # Exit code is not 0
   then
-    exit 1
+    exit
   fi
 done
