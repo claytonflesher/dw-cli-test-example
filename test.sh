@@ -14,4 +14,4 @@ do
   SCRIPT=$(<$FILE)
   echo $SCRIPT
   dw -i payload $INPUT "$SCRIPT"
-done
+done || exit 1
