@@ -10,3 +10,6 @@
 `./test.sh -i ./users.json -s ./scripts`
 
 
+## DW CLI
+
+https://github.com/mulesoft-labs/data-weave-native
