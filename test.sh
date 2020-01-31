@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 while getopts s:i: option
 do
@@ -14,4 +14,8 @@ do
   SCRIPT=$(<$FILE)
   echo $SCRIPT
   dw -i payload $INPUT "$SCRIPT"
-done || exit 1
+  if [ "$?" -ne 0 ] # Exit code is not 0
+  then
+    exit 1
+  fi
+done
