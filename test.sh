@@ -12,6 +12,7 @@ done
 for FILE in $SCRIPTS/*
 do
   SCRIPT=$(<$FILE)
+  echo $FILE
   echo $SCRIPT
   dw -i payload $INPUT "$SCRIPT"
   if [ "$?" -ne 0 ] # Exit code is not 0
